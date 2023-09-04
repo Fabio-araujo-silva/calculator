@@ -11,7 +11,7 @@ export function selectOperation() {
   let escolha = prompt(
     "Qual operação você quer fazer?\n1-Soma(+)\n2-Subtração(-)\n3-Multiplicação(*)\n4-Divisão real(/)\n5-Potenciação(**)\n6-Divisão inteira(%)"
   );
-  
+
   if (escolha > 0 && escolha < 7) {
     let a = parseInt(prompt("Qual o primeiro número?"));
     let b = parseInt(prompt("Qual o segundo número?"));
@@ -39,6 +39,9 @@ export function selectOperation() {
         operacao = "^";
       } else if (escolha === "6") {
         resultado = divisao2(a, b);
+        if (resultado === 0) {
+          resultado = "não é número inteiro";
+        }
         operacao = "%";
       }
 
