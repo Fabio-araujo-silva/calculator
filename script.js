@@ -33,10 +33,13 @@ function calculadora() {
           operacao = '^';
         } else if (escolha === '6') {
           resultado = divisao2(a, b);
+          if (resultado==0){
+            resultado='não é número inteiro'
+          }
           operacao = '%';
         }
   
-        alert(`Resultado de ${a} ${operacao} ${b}= ${resultado}`);
+        alert(`Resultado de ${a} ${operacao} ${b} = ${resultado}`);
         novaOperacao();
 
         }
@@ -83,7 +86,12 @@ function calculadora() {
     }
     
     function divisao2(a, b) {
-      return a % b;
+        if(a%b==0){
+            return a/b
+        } 
+        else{
+            return 0
+        }
     }
   }
   
