@@ -53,12 +53,15 @@ function calculadora() {
             else{
                 novaOperacao()
             }
-
-      }
-    } else {
+        }
+    } 
+    
+    else {
       calculadora();
     }
   
+
+    //funcoes de operacoes
     function soma(a, b) {
       return a + b;
     }
