@@ -15,28 +15,42 @@ function calculadora() {
       if (!a || !b) {
         alert('Você é burro?');
         calculadora();
-      } else {
+      }
+      
+      else {
+      
+      
         if (escolha === '1') {
           resultado = soma(a, b);
           operacao = '+';
-        } else if (escolha === '2') {
+        } 
+        
+        else if (escolha === '2') {
           resultado = subtracao(a, b);
           operacao = '-';
-        } else if (escolha === '3') {
+        }
+        
+        else if (escolha === '3') {
           resultado = multiplicacao(a, b);
           operacao = '*';
-        } else if (escolha === '4') {
+        }
+        
+        else if (escolha === '4') {
           resultado = divisao1(a, b);
           operacao = '/';
-        } else if (escolha === '5') {
+        }
+        
+        else if (escolha === '5') {
           resultado = potenciacao(a, b);
           operacao = '^';
-        } else if (escolha === '6') {
+        }
+        
+        else if (escolha === '6') {
           resultado = divisao2(a, b);
-          if (resultado==0){
+          if (resultado===0){
             resultado='não é número inteiro'
           }
-          operacao = '%';
+          operacao = '/';
         }
   
         alert(`Resultado de ${a} ${operacao} ${b} = ${resultado}`);
