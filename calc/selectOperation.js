@@ -19,7 +19,7 @@ export function selectOperation() {
     let resultado = 0;
 
     if (!a || !b) {
-      alert("Você é burro?");
+      alert("Número não válido");
       return true;
     } else {
       if (escolha === "1") {
