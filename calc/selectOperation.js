@@ -39,10 +39,16 @@ export function selectOperation() {
         operacao = "^";
       } else if (escolha === "6") {
         resultado = divisao2(a, b);
-        if (resultado === 0) {
+        if (resultado === 1) {
           resultado = "não é número inteiro";
         }
-        operacao = "%";
+        else{
+          resultado = a/b
+          if(resultado<1){
+            resultado = "não é número inteiro";
+          }
+        }
+        operacao = "/";
       }
 
       alert(`Resultado de ${a} ${operacao} ${b}= ${resultado}`);
